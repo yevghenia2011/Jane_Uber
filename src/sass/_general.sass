@@ -7,23 +7,21 @@ nav
 	width: 100%
 	height: 50px
 	background-color: #212121
-	z-index: 2
-
-.hamburger
-	display: none
+	z-index: 5
 
 .menu
 	display: flex
 	justify-content: space-between
-	padding: 13px
+	padding: 13px 70px 
 	margin: 0
 	list-style-type: none
 	&_link
 		color: #ffffff
 		font-size: 15px
-		font-weight: 400
+		font-weight: 300
 		&:hover
 			text-decoration: none
+			color: $main-color
 	&_item
 		border-right: 2px dotted black
 		padding-right: 28px
@@ -61,6 +59,9 @@ nav
 		text-transform: uppercase
 		text-align: right
 		line-height: 12px
+		&:hover
+			text-decoration: none
+			color: #fff
 	&_btn
 		margin-top: 19px
 		width: 172px
@@ -76,6 +77,8 @@ nav
 		text-transform: uppercase
 		+btn_hover
 	
+.hamburger
+	display: none
 
 .promo
 	min-height: 800px
@@ -114,43 +117,13 @@ nav
 		border: none
 		border-radius: 4px
 		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+		text-shadow: 1px 1px 0 rgba (0, 0, 0, 0.21)
 		color: #ffffff
 		font-size: 18px
 		font-weight: 400
 		text-transform: uppercase
 		+btn_hover
 		
-.label
-	display: block
-	margin: 0 auto
-	height: 24px
-	width: 112px
-	padding: 5px 12px
-	background-color: #000000
-	color: #ffffff
-	font-size: 11px
-	font-weight: 300
-	text-transform: uppercase
-	text-align: center
-
-.title
-	display: block
-	margin-bottom: 0
-	margin-top: 38px
-	color: #222222
-	font-size: 38px
-	font-weight: 700
-	text-transform: uppercase
-	text-align: center
-
-.subtitle
-	display: block
-	margin: 0 auto
-	color: #222222
-	font-size: 17px
-	font-weight: 400
-	line-height: 21px
-	text-align: center
 
 .reasons
 	padding: 71px 0 65px 0
@@ -166,7 +139,7 @@ nav
 		margin-right: 26px
 		width: 113px
 		height: 113px
-		background-color: #1eacc7
+		background-color: $main-color
 		border-radius: 100%
 	&_descr
 		width: 341px
@@ -175,6 +148,39 @@ nav
 		font-size: 15px
 		font-weight: 300
 		line-height: 21px
+
+.label
+	position: relative
+	margin: 0 auto
+	height: 24px
+	width: 112px
+	padding: 5px 12px
+	background-color: #000000
+	color: #ffffff
+	font-size: 11px
+	font-weight: 300
+	text-transform: uppercase
+	text-align: center
+
+.title
+	position: relative
+	margin-bottom: 0
+	margin-top: 38px
+	color: #222222
+	font-size: 38px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+
+.subtitle
+	position: relative
+	margin: 0 auto
+	color: #222222
+	font-size: 17px
+	font-weight: 400
+	line-height: 21px
+	text-align: center
+
 
 .mobile
 	min-height: 864px
@@ -247,60 +253,44 @@ nav
 	position: relative
 	min-height: 896px
 	padding: 57px 0 138px
-	background: url(..//img/bg_black_car_blue.png) center (center / cover) no-repeat
-	&_img
-		display: flex
-		justify-content: center
-		align-items: center
-		text-transform: uppercase
-		text-align: center
-		padding: 5px 12px
+	background: url(../img/bg_NEW_black_car.png) center (center / cover) no-repeat
 	&_descr 
+		margin-top: 540px
 		text-align: center
-		color: #222222
+		color: #222222 
 		font-size: 17px
 		font-weight: 300
-		margin-top: 470px
 		line-height: 24px
 
 .label_white
-	display: block
-	margin: 0 auto
-	height: 24px
-	width: 112px
-	padding: 5px 12px
-	background-color: #ffffff 
-	color: #000000
-	font-size: 11px
-	font-weight: 300
-	text-transform: uppercase
-	text-align: center
-
+		position: relative
+		margin: 0 auto
+		height: 24px
+		width: 112px
+		padding: 5px 12px
+		background-color: #ffffff 
+		color: #000000
+		font-size: 11px
+		font-weight: 300
+		text-transform: uppercase
+		text-align: center
 .title_white
-	display: block
-	margin-bottom: 0
-	margin-top: 38px
-	color: #ffffff
-	font-size: 38px
-	font-weight: 700
-	text-transform: uppercase
-	text-align: center
-
+		position: relative
+		margin-bottom: 0
+		margin-top: 38px
+		color: #ffffff
+		font-size: 38px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
 .subtitle_white
-	display: block
-	margin: 0 auto
-	color: #ffffff
-	font-size: 17px
-	font-weight: 400
-	line-height: 21px
-	text-align: center
-
-.subtitle_car
-	color: #222222
-	font-size: 17px
-	font-weight: 300
-	line-height: 24px
-	text-align: center
+		position: relative
+		margin: 0 auto
+		color: #ffffff
+		font-size: 17px
+		font-weight: 400
+		line-height: 21px
+		text-align: center
 
 .require
 	padding: 68px 0 84px 0
@@ -337,7 +327,7 @@ nav
 		font-weight: 300
 		line-height: 24px
 		color: #1ca8c3
-	.warning	
+.warning	
 		.require_title
 			color: $second-color
 		.require_list
